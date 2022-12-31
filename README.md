@@ -1,5 +1,17 @@
 # dtone-nuxt
 
+## Summary
+This is a public repo for the technical assessment for DT One. This will allow reviewers to access the codebase and analyse the development methodology. The assessment was given on the 29 December 2022 and the deadline to be given on the 2 January 2022. (Roughly 4 days to complete)
+
+
+The technical assessment is built on Nuxt.js (2.xx) and Ant Design. The reason of behind choosing Nuxt.js is mainly because nuxtjs has all the neccessary tools to deploy rapidly and efficiently to production. Ant Design (Vue) is chosen mainly because I have worked on Ant Design (React) previously and it has all the UI components required for this assessment without focusing too much in building from scratch. 
+
+
+
+
+# Nuxt setup and cheat sheet
+
+
 ## Build Setup
 
 ```bash
