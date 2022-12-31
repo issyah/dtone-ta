@@ -11,7 +11,7 @@
         paddingBottom: '50px',
         minHeight: '100vh',
       }">
-        <Nuxt />
+        <Nuxt keep-alive/>
       </div>
     </a-layout-content>
   </a-layout>
@@ -22,14 +22,5 @@
 }
 </style>
 <script>
-export default {
-  data:() => ({
-    errorMessage: this?.$globalErrorMessage
-  }),
-  watch: {
-    errorMessage(value){
-      console.log(value);
-    }
-  }
-};
+
 </script>

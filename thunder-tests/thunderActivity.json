@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "https://preprod-dvs-api.dtone.com/v1/products",
-    "url": "https://preprod-dvs-api.dtone.com/v1/products",
+    "url": "https://preprod-dvs-api.dtone.com/v1/benefits",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-12-30T05:41:14.054Z",
-    "modified": "2022-12-31T03:23:58.047Z",
+    "modified": "2022-12-31T15:21:24.675Z",
     "headers": [],
     "params": [],
     "auth": {

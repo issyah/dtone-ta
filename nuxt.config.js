@@ -29,7 +29,7 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/proxy", "@nuxtjs/axios"],
+  modules: ["@nuxtjs/proxy", "@nuxtjs/axios", "@nuxtjs/moment"],
   axios: {
     proxy: true,
   },

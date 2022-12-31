@@ -4,12 +4,21 @@
 This is a public repo for the technical assessment for DT One. This will allow reviewers to access the codebase and analyse the development methodology. The assessment was given on the 29 December 2022 and the deadline to be given on the 2 January 2022. (Roughly 4 days to complete)
 
 
-The technical assessment is built on Nuxt.js (2.xx) and Ant Design. The reason of behind choosing Nuxt.js is mainly because nuxtjs has all the neccessary tools to deploy rapidly and efficiently to production. Ant Design (Vue) is chosen mainly because I have worked on Ant Design (React) previously and it has all the UI components required for this assessment without focusing too much in building from scratch. 
+The technical assessment is built on Nuxt.js (2.xx) and Ant Design. The reason of behind choosing Nuxt.js is mainly because nuxtjs has all the neccessary tools to deploy rapidly and efficiently to production. Nuxt.js (2.xx) also is currently in Vue 2.x as this is the current Vue version DT One is currently adopting. Ant Design (Vue) is chosen mainly because I wanted to try ANTD in Vue and it has all the UI components required for this assessment without focusing too much in building from scratch. I've used AntD previously on react.  
 
 
 
+## Challenges along the way 
+- Localhost:3000 couldn't access the API endpoint due to Cors policy error. Used a nuxt/proxy-module to create an API proxy for the API endpoint. 
+- ANTD Grid layout didn't follow the conventional 12 grid. (they are using 24 grid instead).
+- ANTD has very limited utility classes/components. For example, on MUI, they have spacing and margin classes to add granular spacing on UI based on a scale factor of 8. 
+- ANTD more technical detail are in chinese. yikes.
+- Needed to reset the muscle memory of writing in JSX(React). Had to refer to vue's documentation.
+- Needed to refresh the development methodology of vue. It doesn't work like react.
+- Missing information on API documentation. For example, on the API:/products, it didn't show that the result actually returns a RESPONSE HEADERS for the total number of pages, total number of counts etc. Initially, i thought it wasn't available on the response. Only found out when I was viewing the API:/countries
 
-# Nuxt setup and cheat sheet
+
+# Nuxt setup for development
 
 
 ## Build Setup
