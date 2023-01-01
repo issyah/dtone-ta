@@ -7,8 +7,6 @@
     <Nav></Nav>
     <a-layout-content>
       <div :style="{
-        paddingTop: '50px',
-        paddingBottom: '50px',
         minHeight: '100vh',
       }">
         <Nuxt keep-alive/>
@@ -17,9 +15,7 @@
   </a-layout>
 </template>
 <style scoped>
-.ant-layout-content {
-  padding: 0 50px;
-}
+
 </style>
 <script>
 

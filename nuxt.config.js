@@ -1,6 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: "static",
+  target: "server",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Megasoft",
@@ -24,12 +24,11 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/proxy", "@nuxtjs/axios", "@nuxtjs/moment"],
+  modules: ["@nuxtjs/proxy", "@nuxtjs/axios", "@nuxtjs/moment", "cookie-universal-nuxt"],
   axios: {
     proxy: true,
   },
@@ -41,7 +40,7 @@ export default {
       }
     }
   },
-  publicRuntimeConfig: {
+  env: {
     apiKey: process.env.API_KEY,
     apiSecret: process.env.API_SECRET,
   },

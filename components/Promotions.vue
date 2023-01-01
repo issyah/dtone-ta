@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <a-space size="large" direction="vertical" :style="{ width: '100%' }">
+    <a-space direction="vertical" :style="{ width: '100%' }">
       <a-list
         :grid="{ gutter: 16, md: column }"
         :data-source="promotions"
@@ -40,7 +40,7 @@
               class="text-elipsis"
               :style="{marginBottom:'14px'}"
             />
-            <a-space direction="vertical" align="top">
+            <a-space direction="vertical" align="start">
               <span
                 >Start date:
                 <b>{{ $moment(item?.start_date).format("DD MMM YY") }}</b></span

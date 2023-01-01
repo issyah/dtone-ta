@@ -21,6 +21,48 @@
     "tests": []
   },
   {
+    "_id": "b21235e6-4dec-46ac-8d49-364240bd336f",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://preprod-dvs-api.dtone.com/v1/benefits",
+    "url": "https://preprod-dvs-api.dtone.com/v1/balances",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-12-30T05:41:14.054Z",
+    "modified": "2022-12-31T17:05:53.007Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "6d0480d5-2132-56bb-9f04-fec613de2ac4",
+        "password": "fa838754-c2e0-5118-85ba-be8b835b0774"
+      }
+    },
+    "tests": []
+  },
+  {
+    "_id": "31dad2b2-85e9-4170-819f-dcd27dcf7a02",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://preprod-dvs-api.dtone.com/v1/transactions",
+    "url": "https://preprod-dvs-api.dtone.com/v1/transactions",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-12-30T05:41:14.054Z",
+    "modified": "2023-01-01T17:05:40.180Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "6d0480d5-2132-56bb-9f04-fec613de2ac4",
+        "password": "fa838754-c2e0-5118-85ba-be8b835b0774"
+      }
+    },
+    "tests": []
+  },
+  {
     "_id": "24c08c38-ae54-454b-a0e9-9fd088feb604",
     "colId": "history",
     "containerId": "",

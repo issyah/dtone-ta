@@ -62,13 +62,7 @@ export default {
       localStorage.setItem("pd_layout", val);
     },
   },
-  watch:{
-    filterServiceId(value){
-      console.log(value);
-    }
-  }, 
   created() {
-    console.log('hello?');
     if (process.client) {
       this.layout = localStorage.getItem("pd_layout") || "grid";
     }

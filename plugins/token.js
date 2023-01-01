@@ -1,4 +1,5 @@
-export default function({$config:{apiKey,apiSecret}}, inject){
+
+export default function({env:{apiKey,apiSecret}}, inject){
   const token = Buffer.from(`${apiKey}:${apiSecret}`).toString('base64');
-  inject('basicAuthToken', token)
+  inject('basicAuthToken', token);
 }

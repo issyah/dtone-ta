@@ -1,13 +1,13 @@
 <template>
   <div>
-    <a-spacing direction="vertical" :style="{ width: '100%' }" size="large">
+    <a-space direction="vertical" :style="{ width: '100%' }" size="large">
       <h1>Promotions</h1>
       <promotions :per-page="4" :column="3" :show-more="true" />
       <div :style="{ marginTop: '36px' }">
         <h1>View by services</h1>
         <service-cards/>
       </div>
-    </a-spacing>
+    </a-space>
   </div>
 </template>
 

@@ -2,12 +2,6 @@
 
 <template>
   <a-layout-header
-    :style="{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      background: '#FFF',
-    }"
   >
     <nuxt-link class="header-logo" to="/">Megasoft</nuxt-link>
     <a-menu id="main-nav" mode="horizontal" v-model="selected">

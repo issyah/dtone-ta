@@ -41,7 +41,7 @@
           padding: '24px',
         }"
       >
-        <a-descriptions title="Details" size="large" bordered>
+        <a-descriptions title="Details" size="default" bordered>
           <a-descriptions-item label="Zones">
             {{ product?.availability_zones?.toString() }}
           </a-descriptions-item>
@@ -68,9 +68,17 @@
             {{ product?.operator?.name }}
           </a-descriptions-item>
           <a-descriptions-item label="Country">
-            {{ product?.operator?.name }}
+            {{ product?.operator?.country?.name }}
+          </a-descriptions-item>
+          <a-descriptions-item label="Type">
+            {{ product?.type }}
           </a-descriptions-item>
         </a-descriptions>
+      </div>
+      <div :style="{ textAlign: 'right' }">
+        <a-button type="primary" size="large" block @click="handleBuy"
+          >Buy</a-button
+        >
       </div>
     </a-space>
   </div>
@@ -84,6 +92,9 @@ export default {
     product: {},
   }),
   methods: {
+    handleBuy() {
+      this.$router.push('/purchase/transaction');
+    },
     async getProduct() {
       this.loading = true;
       try {
