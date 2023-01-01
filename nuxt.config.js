@@ -28,9 +28,12 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/proxy", "@nuxtjs/axios", "@nuxtjs/moment", "cookie-universal-nuxt"],
+  modules: ["@nuxtjs/proxy", "@nuxtjs/axios", "@nuxtjs/moment", "cookie-universal-nuxt", "@nuxtjs/markdownit"],
   axios: {
     proxy: true,
+  },
+  markdownit:{
+    runtime: true
   },
   proxy:{
     '/api/' : {

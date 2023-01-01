@@ -8,7 +8,7 @@
       <a-list-item slot="renderItem" slot-scope="item, index">
         <a-card
           :key="index"
-          :border="false"
+          :bordered="false"
           hoverable
           @click="$router.push(`/services/${item?.id}`)"
           :style="{
@@ -33,9 +33,10 @@
               :id="item?.id"
               :style="{
                 fontSize: '34px',
+                color: 'var(--blue-5)'
               }"
             />
-            <h2 :style="{marginBottom:0}">{{ item?.name }}</h2>
+            <h4 :style="{marginBottom:0}">{{ item?.name }}</h4>
           </a-space>
         </a-card>
       </a-list-item>
@@ -55,9 +56,9 @@ export default {
   },
   props: {},
   created() {
-    if (this.$store?.state?.services?.length == 0) {
-      this.$store.dispatch("fetchServices");
-    }
+    // if (this.$store?.state?.services?.length == 0) {
+    //   this.$store.dispatch("fetchServices");
+    // }
   },
 };
 </script>

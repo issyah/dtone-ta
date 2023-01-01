@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <a-space direction="vertical" :style="{ width: '100%' }">
+    <a-space direction="vertical" :style="{ width: '100%', marginTop:0 }">
       <a-list
         :grid="{ gutter: 16, md: column }"
         :data-source="promotions"
@@ -28,9 +28,9 @@
                 <span class="operator-label">{{ item?.operator?.name }}</span>
                 <a-tag>{{ item?.operator?.country?.name }}</a-tag>
               </div>
-              <h2 class="text-elipsis" :style="{ marginBottom: 0 }">
+              <h4 class="text-elipsis" :style="{ marginBottom: 0 }">
                 {{ item?.title }}
-              </h2>
+              </h4>
             </template>
             <a slot="actions">
               <nuxt-link :to="`/promotions/${item?.id}`">View</nuxt-link>

@@ -46,9 +46,9 @@ export default {
   },
   created() {
     // the services list is stored in vuex. If a user happens to refresh or the list is empty, we need to populate the services again.
-    if (this.$store?.state?.services?.length == 0) {
-      this.$store.dispatch("fetchServices");
-    }
+    // if (this.$store?.state?.services?.length == 0) {
+    //   this.$store.dispatch("fetchServices");
+    // }
   },
 };
 </script>

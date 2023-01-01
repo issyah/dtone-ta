@@ -18,11 +18,13 @@ export const mutations = {
 };
 
 export const actions = {
-  async nuxtServerInit(context){
+  async nuxtServerInit({commit, dispatch}){
     const savedUser = this.$cookies.get('user');
     if(savedUser){
-      context.commit('setUser', savedUser);
+      commit('setUser', savedUser);
     }
+    await dispatch('fetchServices');
+    await dispatch('fetchBenefits');
   },
   async fetchServices(context) {
     const res = await this.$axios.$get(`/api/services`, {

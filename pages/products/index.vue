@@ -14,7 +14,7 @@
       }">All Products</h1>
       <div>
         <a-space size="small">
-          <benefits-filter />
+          <benefits-filter  @benefit-id="handleBenefitId($event)"/>
           <service-filter 
             @service-id="handleServiceId($event)"
           />
@@ -33,7 +33,7 @@
         </a-space>
       </div>
     </div>
-    <products :layout="layout" :filter-service-id="filterServiceId"/>
+    <products :layout="layout" :filter-service-id="filterServiceId" :filter-benefits="filterBenefitId"/>
   </div>
 </template>
 <script>
@@ -44,6 +44,7 @@ export default {
   data: () => ({
     layout: "grid",
     filterServiceId: '',
+    filterBenefitId: ''
   }),
   components: {
     Products,
@@ -53,6 +54,10 @@ export default {
   methods: {
     handleServiceId(id){
       this.filterServiceId = id;
+    },
+    handleBenefitId(id){
+      console.log(id);
+      this.filterBenefitId = id;
     },
     setLayout(val) {
       if (val === this.layout) {

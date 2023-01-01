@@ -152,6 +152,7 @@ export default {
   props: {
     layout: { Type: String, default: "grid" },
     filterServiceId: { Type: Number, default: null },
+    filterBenefits: {Type: String, default: null},
   },
   methods: {
     // retrieve the product data via api.
@@ -163,6 +164,9 @@ export default {
         };
         if (this.filterServiceId) {
           params["service_id"] = this.filterServiceId;
+        }
+        if(this.filterBenefits){
+          params["benefit_types"] = [this.filterBenefits]
         }
         const res = await this.$axios.get(
           `/api/products?${new URLSearchParams(params).toString()}`,
@@ -207,6 +211,10 @@ export default {
       this.page = 1;
       this.getInitProducts();
     },
+    filterBenefits(value){
+      this.page = 1; 
+      this.getInitProducts();
+    }
   },
   mounted() {
     this.getInitProducts();

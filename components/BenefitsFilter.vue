@@ -31,10 +31,15 @@ export default {
       this.selected = value;
     }
   },
-  created(){
-    if(this.$store?.state?.benefits?.length == 0){
-      this.$store.dispatch('fetchBenefits');
+  watch:{
+    selected(value){
+      this.$emit('benefit-id', value);
     }
+  },
+  created(){
+    // if(this.$store?.state?.benefits?.length == 0){
+    //   this.$store.dispatch('fetchBenefits');
+    // }
   }
 }
 </script>

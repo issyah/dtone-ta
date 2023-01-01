@@ -32,11 +32,11 @@ export default {
       return this.$store?.state?.services
     }
   },
-  created(){
-    if (this.$store?.state?.services?.length == 0) {
-      this.$store.dispatch("fetchServices");
-    }
-  },
+  // created(){
+  //   if (this.$store?.state?.services?.length == 0) {
+  //     this.$store.dispatch("fetchServices");
+  //   }
+  // },
   mounted() {},
 };
 </script>
