@@ -120,6 +120,7 @@
 </template>
 <script>
 import Breadcrumb from "../../components/Breadcrumb.vue";
+import {v4 as uuidv4} from 'uuid';
 export default {
   components: { Breadcrumb },
   data: () => ({
@@ -157,14 +158,16 @@ export default {
         if(!err){
           this.$axios.post(`/api/async/transactions`, {
             product_id : this?.product?.id,
-            external_id: `${this.product?.id}_${this.$moment(new Date).format('YYYY_MM_DD_hh_ii')}`,
+            external_id: uuidv4(),
             auto_confirm:true,
             credit_party_identifier: values
           }).then((response) => {
-            if(response?.status){
-              this.$router.push('/transaction-status/' + response?.id);
+            const data = response.data;
+            if(data?.status){
+              this.$router.push('/transaction-status/' + data?.id);
             }
           }).catch((error) => {
+            this.purchaseLoading = false;
             if(error.response){
               const errors = error.response?.data?.errors;
               errors?.forEach((item) => {
@@ -174,7 +177,7 @@ export default {
           })
         }
       });
-      this.purchaseLoading = false;
+      // this.purchaseLoading = false;
       // try {
       //   const res = await this.$axios.post(
       //     `/api/async/transactions`,
@@ -197,7 +200,7 @@ export default {
       // } catch (error) {
       //   this.$message.error(error?.message);
       // }
-      this.purchaseLoading = false;
+      // this.purchaseLoading = false;
     },
     async getProduct() {
       this.loading = true;

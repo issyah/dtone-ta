@@ -17,7 +17,7 @@
             <h4>Details</h4>
             <a-descriptions :column="1">
               <a-descriptions-item label="Status">
-                {{ item.status.message }}
+                {{ item.status?.message }}
               </a-descriptions-item>
               <a-descriptions-item label="Created date">
                 {{ $moment(item?.creation_date).format("DD MMM YY / h:mm a") }}
