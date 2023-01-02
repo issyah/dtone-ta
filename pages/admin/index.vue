@@ -6,6 +6,7 @@
     <a-space direction="vertical" size="large" :style="{width:'100%'}">
       <h1>Dashboard</h1>
       <auth-balance/>
+      <auth-transactions/>
     </a-space>
   </div>
 </template>

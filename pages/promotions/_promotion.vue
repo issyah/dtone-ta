@@ -50,7 +50,7 @@
           </a-col>
         </a-row>
         <a-card title="Terms">
-          <div v-html="$md.render(item?.terms)"></div>
+          <div :style="" v-html="$md.render(item?.terms)"></div>
         </a-card>
       </a-space>
     </div>

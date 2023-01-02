@@ -9,7 +9,7 @@
       <div :style="{
         minHeight: '100vh',
       }">
-        <Nuxt keep-alive/>
+        <Nuxt/>
       </div>
     </a-layout-content>
   </a-layout>

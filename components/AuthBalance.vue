@@ -71,4 +71,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.ant-statistic-content-value, .ant-statistic-content-value-int{
+  font-size: 1.56rem;
+}
+</style>
