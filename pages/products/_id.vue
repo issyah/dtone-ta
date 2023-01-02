@@ -161,6 +161,10 @@ export default {
             external_id: uuidv4(),
             auto_confirm:true,
             credit_party_identifier: values
+          },{
+            headers:{
+              Authorization: `Basic ${this.$basicAuthToken}`
+            }
           }).then((response) => {
             const data = response.data;
             if(data?.status){
@@ -177,30 +181,6 @@ export default {
           })
         }
       });
-      // this.purchaseLoading = false;
-      // try {
-      //   const res = await this.$axios.post(
-      //     `/api/async/transactions`,
-      //     {
-      //       product_id: this.product?.id,
-      //       external_id: `${this.product?.id}_${this.$moment(new Date()).format(
-      //         "YYYY_MM_DD"
-      //       )}`,
-      //       auto_confirm: true,
-      //     },
-      //     {
-      //       headers: {
-      //         Authorization: `Basic ${this.$basicAuthToken}`,
-      //       },
-      //     }
-      //   );
-      //   if (res) {
-      //     console.log(res);
-      //   }
-      // } catch (error) {
-      //   this.$message.error(error?.message);
-      // }
-      // this.purchaseLoading = false;
     },
     async getProduct() {
       this.loading = true;
