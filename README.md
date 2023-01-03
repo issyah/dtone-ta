@@ -15,13 +15,14 @@ The objective of this assignment is to also access my own capability of working 
 - ANTD Grid layout didn't follow the conventional 12 grid (they are using 24 grid instead). So I needed to keep recalculating the grid spacing.
 - ANTD has no utility classes/components. For example, on MUI, they have spacing and margin classes to add granular spacing on UI based on a scale factor of 8. To have a top padding of 8px, we can simply use class="pt-1". 
 - ANTD more technical and indepth detail are in chinese. yikes.
+- ANTD is didn't prioritize on PWA. Example: There isn't a utility class or API for the table and menu component to make it responsive. If I have to make it mobile friendly, I have to write LESS css to include in the build. This would unfortunately increase my time spent on this.
 - Needed to reset the muscle memory of writing in JSX(React). Had to refer to vue's documentation.
 - Needed to refresh the development methodology of vue. It doesn't work like react.
 
 
 ## Pages tree
 
-This the is heirachy order of the url path. 
+This is the heirachy order of the url path. 
 
 - / 
 - /admin (auth)
