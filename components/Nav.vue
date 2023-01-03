@@ -3,7 +3,7 @@
 <template>
   <a-layout-header>
     <nuxt-link class="header-logo" to="/">Megasoft</nuxt-link>
-    <a-menu id="main-nav" mode="horizontal" v-model="selected">
+    <a-menu id="main-nav" mode="horizontal" v-model="selected" >
       <a-sub-menu key="/benefits">
         <span slot="title" class="submenu-title-wrapper">
           Benefits <a-icon type="caret-down"/>
@@ -73,5 +73,13 @@ export default {
 .header-logo {
   font-size: 24px;
   color: inherit;
+  width:50%;
+}
+@media (max-width: 768px){
+  #main-nav{
+    display: flex;
+    flex-grow: 0;
+    width:50px;
+  }
 }
 </style>

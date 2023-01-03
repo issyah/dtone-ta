@@ -9,7 +9,7 @@
     :gutter="[16, 16]"
     :style="{ width: '100%' }"
   >
-    <a-col :md="8">
+    <a-col :md="8" :xs="24">
       <a-space direction="vertical" :style="{ width: '100%' }">
         <nuxt-link to="/">
           <h2

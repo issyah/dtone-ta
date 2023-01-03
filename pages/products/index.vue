@@ -2,22 +2,21 @@
 
 <template>
   <div>
-    <div
-      :style="{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      }"
-    >
-      <h1 :style="{
-        marginBottom:0
-      }">All Products</h1>
+    <div class="header-filter">
+      <h1
+        :style="{
+          marginBottom: 0,
+        }"
+      >
+        All Products
+      </h1>
       <div>
-        <a-space size="small">
-          <benefits-filter  @benefit-id="handleBenefitId($event)"/>
-          <service-filter 
-            @service-id="handleServiceId($event)"
-          />
+        <a-space  size="small" :style="{
+          flexWrap: 'wrap',
+          gap:'4px',
+        }">
+          <benefits-filter @benefit-id="handleBenefitId($event)" />
+          <service-filter @service-id="handleServiceId($event)" />
           <a-button-group>
             <a-button
               :type="layout == 'grid' ? 'primary' : undefined"
@@ -33,7 +32,11 @@
         </a-space>
       </div>
     </div>
-    <products :layout="layout" :filter-service-id="filterServiceId" :filter-benefits="filterBenefitId"/>
+    <products
+      :layout="layout"
+      :filter-service-id="filterServiceId"
+      :filter-benefits="filterBenefitId"
+    />
   </div>
 </template>
 <script>
@@ -43,19 +46,19 @@ import BenefitsFilter from "../../components/BenefitsFilter.vue";
 export default {
   data: () => ({
     layout: "grid",
-    filterServiceId: '',
-    filterBenefitId: ''
+    filterServiceId: "",
+    filterBenefitId: "",
   }),
   components: {
     Products,
     ServiceFilter,
-    BenefitsFilter
+    BenefitsFilter,
   },
   methods: {
-    handleServiceId(id){
+    handleServiceId(id) {
       this.filterServiceId = id;
     },
-    handleBenefitId(id){
+    handleBenefitId(id) {
       console.log(id);
       this.filterBenefitId = id;
     },
@@ -74,3 +77,11 @@ export default {
   },
 };
 </script>
+<style scoped>
+.header-filter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+</style>

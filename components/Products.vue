@@ -43,7 +43,7 @@
             v-for="(item, index) in products"
             :key="index"
             :md="8"
-            :xs="12"
+            :xs="24"
             :style="{}"
           >
             <a-card

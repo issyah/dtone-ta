@@ -12,7 +12,9 @@
   </div>
   <!-- result available -->
   <div v-else>
-    <a-space direction="vertical" size="large">
+    <a-space direction="vertical" size="large" :style="{
+      flexWrap: 'wrap',
+    }">
       <breadcrumb
         :breadcrumbs="[
           { to: '/', label: 'Home' },

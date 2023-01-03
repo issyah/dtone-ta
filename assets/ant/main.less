@@ -32,6 +32,7 @@ img{
   height:auto;
 }
 
+
 .text-elipsis{
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -56,4 +57,16 @@ img{
   --blue-3: @blue-3;
   --blue-4: @blue-4;
   --blue-5: @blue-5;
+}
+
+@media (max-width: 768px){
+  .ant-layout-content{
+    padding: 50px 16px;
+  }
+  .ant-layout-header, .ant-layout-footer{
+    padding: 16px;
+  }
+  .ant-layout-header{
+    justify-content: space-between;
+  }
 }
