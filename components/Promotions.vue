@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <a-space direction="vertical" :style="{ width: '100%', marginTop:0 }">
+    <a-space direction="vertical" :style="{ width: '100%', marginTop: 0 }">
       <a-list
         :grid="{ gutter: 16, md: column }"
         :data-source="promotions"
@@ -38,7 +38,7 @@
             <a-card-meta
               :description="item?.description"
               class="text-elipsis"
-              :style="{marginBottom:'14px'}"
+              :style="{ marginBottom: '14px' }"
             />
             <a-space direction="vertical" align="start">
               <span
@@ -80,28 +80,26 @@ export default {
     showMore: { Type: Boolean, default: false },
   },
   methods: {
-    async getAllPromotions() {
-      this.loading = true;
-      const params = {
-        ...(this.perPage && {
-          per_page: this.perPage,
-        }),
+    getAllPromotions() {
+      const params = {};
+      if(this.perPage) { 
+        params['per_page'] = this.perPage
       };
-      const res = await this.$axios.$get(
+      this.loading = true;
+      const res = this.$axios.get(
         `/api/promotions?${new URLSearchParams(params).toString()}`,
         {
           headers: {
             Authorization: `Basic ${this.$basicAuthToken}`,
           },
         }
-      );
-      if (res.error) {
-        this.$message.error(res?.error[0]?.message);
+      ).then((response) => {
+        this.promotions = response;
         this.loading = false;
-        return;
-      }
-      this.promotions = res;
-      this.loading = false;
+      }).catch((error) => {
+        this.loading = false;
+      });
+
     },
   },
   mounted() {
